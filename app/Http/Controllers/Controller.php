@@ -11,7 +11,12 @@ use Illuminate\Support\Facades\DB;
 class Controller extends BaseController
 {
     public function regist(Request $request){
-        $user = User::create($request->all());
+        $user = User::where('name',$request->name)->first();
+        if(!empty($user)){
+            DB::table('user_question')->where('user_id',$user->id)->delete();
+        }else{
+            $user = User::create($request->all());
+        }
         $role = Role::where('id',1)->first();
         session([
             'user_id' => $user->id,
@@ -90,6 +95,7 @@ class Controller extends BaseController
                 'score' => array_sum($totalScore),
             ];
         }
+        $data = collect($data)->sortByDesc('score');
         return view('score',compact('data'));
     }
 }
