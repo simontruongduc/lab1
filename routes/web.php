@@ -20,13 +20,5 @@ Route::get('/', function () {
 Route::post('/regist',[Controller::class,'regist']);
 Route::get('/question',[Controller::class,'question']);
 Route::post('/question',[Controller::class,'save']);
-
-Route::get('/finish', function () {
-    return view('finish');
-});
-Route::get('/score', function () {
-    return view('score');
-});
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/finish', [Controller::class,'finish']);
+Route::get('/score', [Controller::class,'score']);

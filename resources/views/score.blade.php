@@ -9,45 +9,24 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>stt</th>
-                                <th>tên</th>
-                                <th>điểm</th>
-                                <th>Thứ hạn</th>
+                                <th>#</th>
+                                <th>name</th>
+                                <th>score</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>53275531</td>
-                                <td>12 May 2017</td>
-                                <td><label class="badge badge-danger">Pending</label></td>
-                            </tr>
-                            <tr>
-                                <td>Messsy</td>
-                                <td>53275532</td>
-                                <td>15 May 2017</td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                            <tr>
-                                <td>John</td>
-                                <td>53275533</td>
-                                <td>14 May 2017</td>
-                                <td><label class="badge badge-info">Fixed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>53275534</td>
-                                <td>16 May 2017</td>
-                                <td><label class="badge badge-success">Completed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Dave</td>
-                                <td>53275535</td>
-                                <td>20 May 2017</td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
+                            @foreach($data as $item)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$item['name']}}</td>
+                                    <td>{{$item['score']}}</td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
+                        <form class="pt-3">
+                            <a href="/" class="btn btn-primary me-2">play again</a>
+                        </form>
                     </div>
                 </div>
             </div>

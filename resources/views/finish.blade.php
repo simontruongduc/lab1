@@ -7,7 +7,7 @@
             </div>
             <h6 class="fw-light">Your score</h6>
             <br>
-            <h1 style="text-align: center">8955685</h1>
+            <h1 style="text-align: center">{{$totalScore}}</h1>
             <form class="pt-3">
                 <a href="/" class="btn btn-primary me-2">play again</a>
                 <a href="/score" class="btn btn-primary me-2">Rating</a>

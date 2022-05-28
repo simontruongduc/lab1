@@ -3,7 +3,7 @@
 <div class="col-lg-4 mx-auto">
     <div class="auth-form-light text-left py-5 px-4 px-sm-5">
         <div class="brand-logo">
-            <h4>Quiz Question!</h4>
+            <h4>Dear as salt</h4>
         </div>
         <h6 class="fw-light">Enter your name before start game</h6>
         <form class="pt-3" action="/regist" method="post">
@@ -14,7 +14,7 @@
             <div class="pt-3">
                 <button type="submit" class="btn btn-primary me-2">Start game</button>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                     introduction
                 </button>
             </div>
@@ -33,10 +33,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Many of our components require the use of JavaScript to function. Specifically, they require jQuery, Popper.js, and our own JavaScript plugins. Place the following
-                    s near the end of your pages, right before the closing
-                    tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
-                        We use jQuery’s slim build, but the full version is also supported.</p>
+                <p>Dear as salt - Test your ruling power with 10 questions. Let's see how much of a king you are.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

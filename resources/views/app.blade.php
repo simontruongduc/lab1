@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin2 </title>
+    <title>Dear as salt</title>
     <base href="{{asset('')}}">
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/feather/feather.css">
@@ -16,7 +16,10 @@
     <link rel="stylesheet" href=" vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href=" css/vertical-layout-light/style.css">
     <link rel="shortcut icon" href=" images/favicon.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="loading/css/modal-loading.css" />
+    <link rel="stylesheet" type="text/css" href="loading/css/modal-loading-animate.css" />
 </head>
 
 <body>
@@ -47,8 +50,25 @@
 <script src=" js/template.js"></script>
 <script src=" js/settings.js"></script>
 <script src=" js/todolist.js"></script>
+<script type="text/javascript" src="loading/js/modal-loading.js"></script>
 @yield('script')
-
+<script>
+    function loadingShow() {
+        return loading = new Loading({
+            title: 					'Dear as salt',
+            titleColor: 			'rgb(217, 83, 79)',
+            discription: 			'Loading...',
+            discriptionColor: 		'rgb(77, 150, 223)',
+            animationOriginColor: 	'rgb(33, 179, 132)',
+            mask: 					true,
+            loadingPadding: 		'20px 50px',
+            defaultApply: 	true,
+        });
+    }
+    function loadingHide(loading){
+        setTimeout(() => loading.out(), 3000);
+    }
+</script>
 <!-- endinject -->
 </body>
 
